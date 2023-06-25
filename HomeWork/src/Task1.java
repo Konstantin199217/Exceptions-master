@@ -7,23 +7,29 @@ public class Task1 {
     и выполняет их деление. Если второе число равно нулю,
     выбросите исключение ArithmeticException с сообщением
     "Деление на ноль недопустимо". Иначе выведите результат деления на экран.*/
-    task1();
+        task1();
 
 
     }
 
     public static void task1() {
-        try {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Введите два числа: ");
-            int a1 = scanner.nextInt();
-            System.out.println("/");
-            int a2 = scanner.nextInt();
-            System.out.println(" ");
-            System.out.println(a1 / a2);
-        }catch (ArithmeticException e){
-            System.out.println("Деление на ноль недопустимо");
+        boolean x = true;
+        while (x) {
+            try {
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Введите два числа: ");
+                int a1 = scanner.nextInt();
+                System.out.println("/");
+                int a2 = scanner.nextInt();
+                System.out.println(" ");
+                System.out.println(a1 / a2);
+                x = false;
+            } catch (ArithmeticException e) {
+                System.out.println("Деление на ноль недопустимо");
+                x = true;
+            }
         }
-
     }
+
+
 }
