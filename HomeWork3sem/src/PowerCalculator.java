@@ -62,9 +62,5 @@ public class PowerCalculator {
             super(message);
         }
     }
-    static class InputMismatchException extends Exception{
-        public InputMismatchException(String message){
-            super(message);
-        }
-    }
+
 }
